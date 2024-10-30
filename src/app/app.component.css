@@ -1,0 +1,213 @@
+/* Change text color of the navbar links */
+.nav-link {
+    color: rgb(167, 167, 167); /* Default text color */
+    padding-top: 0px; /* Adjust padding as needed */
+    padding-bottom: 15px; /* Adjust padding as needed */
+    cursor: pointer;
+}
+
+/* Change text color of the active navbar link */
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover {
+    color: white; /* Change to white when active */
+}
+
+/* Increase the height of the navbar */
+.navbar-custom {
+    height: 70px; /* Change to your desired height */
+    line-height: 70px; /* Vertically center the text */
+}
+
+.resume-link {
+    color: chartreuse;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
+    color: white;
+    padding: 2%;
+    text-align: center;
+    width: 90%;
+    max-width: 80%; /* Adjust maximum width as needed */
+}
+
+.overlay-text h2 {
+    margin-bottom: 10px;
+}
+
+.overlay-text p {
+    margin: 0; /* Remove default margins */
+}
+
+.intro {
+    color: chartreuse;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .overlay-text h2 {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    .overlay-text p {
+        font-size: 10px; /* Adjust font size for smaller screens */
+    }
+}
+
+.education-section h2 {
+    text-align: center;
+}
+
+.revealed {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  
+  .not-revealed {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+/* app.component.css */
+.resume-container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  .crazy-button {
+    display: inline-block;
+    padding: 1em 2em;
+    font-size: 1rem;
+    color: #000;
+    background-color: chartreuse;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .crazy-button .icon {
+    margin-right: 10px;
+    font-size: 1.25rem;
+    vertical-align: middle;
+    animation: glow 1.5s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+  }
+  
+  .crazy-button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.5s;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  .crazy-button:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .crazy-button:hover {
+    background-color: #99ff33;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 0 15px chartreuse;
+    transform: rotate(5deg) scale(1.1);
+    color: #000;
+  }
+  
+  .crazy-button:active {
+    background-color: #66cc00;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 10px chartreuse;
+    transform: rotate(-5deg) scale(1.05);
+    color: #000;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .crazy-button {
+      padding: 1em;
+      font-size: 0.9rem;
+    }
+  
+    .crazy-button .icon {
+      font-size: 1rem;
+      margin-right: 5px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .crazy-button {
+      padding: 0.75em;
+      font-size: 0.8rem;
+    }
+  
+    .crazy-button .icon {
+      font-size: 0.9rem;
+      margin-right: 5px;
+    }
+  }
+
+  .list-group {
+    width: fit-content;
+  }
+  
+  .list-group a{
+    background-color: #000 !important;
+    color: white;
+    border-color: #000;
+    cursor: pointer;
+    /* border-bottom-width: 0.05px;
+    border-bottom-color: antiquewhite; */
+  }
+
+  .accordion-content h5, p{
+    color: #ffffff;
+  }
+
+  .skills-container {
+    width: 70%;
+  }
